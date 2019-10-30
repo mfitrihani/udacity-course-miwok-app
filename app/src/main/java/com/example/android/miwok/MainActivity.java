@@ -18,6 +18,8 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,10 +32,49 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+
+        //attach click listener to the number view
+        TextView numberView = findViewById(R.id.numbers);
+        numberView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent numberViewIntent = new Intent(MainActivity.this,NumbersActivity.class);
+                startActivity(numberViewIntent);
+            }
+        });
+
+        //attach click listener to the color view
+        TextView colorsView = findViewById(R.id.colors);
+        colorsView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent colorViewIntent = new Intent(MainActivity.this,ColorsActivity.class);
+                startActivity(colorViewIntent);
+            }
+        });
+
+        //attach click listener to the family view
+        TextView FamilyView = findViewById(R.id.family);
+        FamilyView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent colorViewIntent = new Intent(MainActivity.this,FamilyActivity.class);
+                startActivity(colorViewIntent);
+            }
+        });
+
+        //attach on click Listener to the phrase view
+        TextView phraseView = findViewById(R.id.phrases);
+        phraseView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phraseViewIntent = new Intent(MainActivity.this,PhrasesActivity.class);
+                startActivity(phraseViewIntent);
+            }
+        });
     }
 
-    public void layoutTest(View view){
-        Intent test = new Intent(this,NumbersActivity.class);
-        startActivity(test);
-    }
 }
+
