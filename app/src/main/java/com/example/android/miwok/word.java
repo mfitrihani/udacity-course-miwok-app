@@ -2,7 +2,7 @@ package com.example.android.miwok;
 
 import java.util.ArrayList;
 
-public class word {
+public class word<Object> {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
 
@@ -15,7 +15,7 @@ public class word {
         return mMiwokTranslation;
     }
 
-    public String getDefaultTranslation(){
+    public String getEnglishTranslation(){
         return mDefaultTranslation;
     }
 }
