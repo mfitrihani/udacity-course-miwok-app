@@ -1,6 +1,5 @@
 package com.example.android.miwok;
 
-import java.util.ArrayList;
 
 public class word<Object> {
     private String mDefaultTranslation;
