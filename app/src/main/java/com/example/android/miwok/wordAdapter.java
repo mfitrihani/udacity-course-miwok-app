@@ -43,12 +43,12 @@ public class wordAdapter extends ArrayAdapter {
         word currentWord = (word) getItem(position);
 
         //find the TextViews in list_item.xml
-        TextView englishWord = listItemView.findViewById(R.id.top_text);
-        TextView miwokWord = listItemView.findViewById(R.id.below_text);
+        TextView miwokWord = listItemView.findViewById(R.id.top_text);
+        TextView englishWord = listItemView.findViewById(R.id.below_text);
 
         //set the text to current object value
-        englishWord.setText(currentWord.getEnglishTranslation());
         miwokWord.setText(currentWord.getMiwokTranslation());
+        englishWord.setText(currentWord.getEnglishTranslation());
 
         //return listItemView now containing modified value
         return  listItemView;
