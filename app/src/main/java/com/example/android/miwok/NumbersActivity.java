@@ -16,7 +16,6 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //set content view
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.activity_list);
 
         //create list of word class
         ArrayList<word> words = new ArrayList<word>();
@@ -51,8 +50,8 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list_number);
+        // activity_listl layout file.
+        ListView listView = (ListView) findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
