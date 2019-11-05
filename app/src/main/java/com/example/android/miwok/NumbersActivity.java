@@ -29,25 +29,26 @@ public class NumbersActivity extends AppCompatActivity {
         //set content view
         setContentView(R.layout.activity_numbers);
 
-        //create list of words
-        ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
+        //create list of word class
+        ArrayList<word> words = new ArrayList<word>();
+
+        words.add(new word("one","lutti"));
+        words.add(new word("two","lutti"));
+        words.add(new word("three","lutti"));
+        words.add(new word("four","lutti"));
+        words.add(new word("five","lutti"));
+        words.add(new word("six","lutti"));
+        words.add(new word("seven","lutti"));
+        words.add(new word("eight","lutti"));
+        words.add(new word("nine","lutti"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
         // simple_list_item_1.xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+        //ArrayAdapter<word> itemsAdapter =
+               // new ArrayAdapter<String>(this, R.layout.list_item, words);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -58,7 +59,7 @@ public class NumbersActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-        listView.setAdapter(itemsAdapter);
+        //listView.setAdapter(itemsAdapter);
 
     }
 }
