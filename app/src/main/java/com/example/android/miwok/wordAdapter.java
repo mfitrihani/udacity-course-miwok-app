@@ -29,6 +29,12 @@ public class wordAdapter extends ArrayAdapter {
         super(context, 0, objects);
     }
 
+    /**
+     * @param position              index of current object's position in a list
+     * @param convertView           view used as template return view
+     * @param parent                parent view
+     * @return listItemView         return view that input into the text views
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
