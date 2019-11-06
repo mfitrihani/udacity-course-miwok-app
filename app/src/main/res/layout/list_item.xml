@@ -2,33 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
+    style="@style/TextCardStyle"
     >
     <ImageView
         android:id="@+id/image_view_translation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:background="#FFF7DA"
         android:src="@mipmap/ic_launcher"/>
     <LinearLayout
+        android:id="@+id/card_linear_layout"
         android:paddingLeft="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_vertical"
         android:layout_toRightOf="@id/image_view_translation">
         <TextView
             android:id="@+id/top_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="lutti"
-            android:textColor="@android:color/black"/>
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
         <TextView
             android:id="@+id/below_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="one"
-            android:textColor="@android:color/black"/>
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
     </LinearLayout>
 
 

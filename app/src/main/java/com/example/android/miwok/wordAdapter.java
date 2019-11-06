@@ -6,14 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.util.List;
 
 public class wordAdapter extends ArrayAdapter {
+    int colorResource;
     /**
      * Constructor
      *
@@ -22,12 +26,14 @@ public class wordAdapter extends ArrayAdapter {
      *                           instantiating views.
      * @param objects            The objects to represent in the ListView.
      */
-    public wordAdapter(@NonNull Context context, int resource, @NonNull List objects) {
+    public wordAdapter(@NonNull Context context, int resource, @NonNull List objects, int colourResource) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, objects);
+        //initialize color
+        colorResource = colourResource;
     }
 
     /**
@@ -67,6 +73,10 @@ public class wordAdapter extends ArrayAdapter {
         else {
             currentImage.setVisibility(View.GONE);
         }
+
+        //set background color of Linear Layout color
+        LinearLayout mainLinear = listItemView.findViewById(R.id.card_linear_layout);
+        mainLinear.setBackgroundColor(ContextCompat.getColor(getContext(), colorResource));
 
         //return listItemView now containing modified value
         return  listItemView;
