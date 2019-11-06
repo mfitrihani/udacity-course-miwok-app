@@ -60,8 +60,13 @@ public class wordAdapter extends ArrayAdapter {
         //find the imageView in list_item
         ImageView currentImage = listItemView.findViewById(R.id.image_view_translation);
 
-        //set the text to current object value
-        currentImage.setImageResource(currentWord.getImageAssetId());
+        //set the text to current object value if exist
+        if (currentWord.hasImage()){
+            currentImage.setImageResource(currentWord.getImageAssetId());
+        }
+        else {
+            currentImage.setVisibility(View.GONE);
+        }
 
         //return listItemView now containing modified value
         return  listItemView;

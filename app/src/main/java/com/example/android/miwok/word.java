@@ -4,7 +4,8 @@ package com.example.android.miwok;
 public class word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageAssetId;
+    private int mImageAssetId = no_image_value;
+    private final static int no_image_value = -1;
 
     public word(String defaultTranslation, String miwokTranslation, int imageAssetId){
         mImageAssetId = imageAssetId;
@@ -26,4 +27,11 @@ public class word {
     }
 
     public int getImageAssetId(){ return mImageAssetId; }
+
+    public Boolean hasImage(){
+        if (mImageAssetId==-1){
+            return false;
+        }
+        else return true;
+    }
 }
