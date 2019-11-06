@@ -12,6 +12,11 @@ public class word {
         mMiwokTranslation = miwokTranslation;
     }
 
+    public word(String defaultTranslation, String miwokTranslation){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+    }
+
     public String getMiwokTranslation(){
         return mMiwokTranslation;
     }
