@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -55,6 +56,12 @@ public class wordAdapter extends ArrayAdapter {
         //set the text to current object value
         miwokWord.setText(currentWord.getMiwokTranslation());
         englishWord.setText(currentWord.getEnglishTranslation());
+
+        //find the imageView in list_item
+        ImageView currentImage = listItemView.findViewById(R.id.image_view_translation);
+
+        //set the text to current object value
+        currentImage.setImageResource(currentWord.getImageAssetId());
 
         //return listItemView now containing modified value
         return  listItemView;
