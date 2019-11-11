@@ -11,6 +11,7 @@
         android:background="#FFF7DA"
         android:src="@mipmap/ic_launcher"/>
     <LinearLayout
+        tools:background="@android:color/black"
         android:id="@+id/card_linear_layout"
         android:paddingLeft="16dp"
         android:layout_width="match_parent"
