@@ -31,15 +31,15 @@ public class NumbersActivity extends AppCompatActivity {
         //create list of word class
         ArrayList<word> words = new ArrayList<word>();
 
-        words.add(new word("one","lutti",R.drawable.number_one));
-        words.add(new word("two","ottiko",R.drawable.number_two));
-        words.add(new word("three","tolookosu",R.drawable.number_three));
-        words.add(new word("four","oyyisa",R.drawable.number_four));
-        words.add(new word("five","massokka",R.drawable.number_five));
-        words.add(new word("six","temmokka",R.drawable.number_six));
-        words.add(new word("seven","kawinta",R.drawable.number_seven));
-        words.add(new word("eight","wo'e",R.drawable.number_eight));
-        words.add(new word("nine","na'aacha",R.drawable.number_nine));
+        words.add(new word("one","lutti",R.drawable.number_one,R.raw.number_one));
+        words.add(new word("two","ottiko",R.drawable.number_two,R.raw.number_two));
+        words.add(new word("three","tolookosu",R.drawable.number_three,R.raw.number_three));
+        words.add(new word("four","oyyisa",R.drawable.number_four,R.raw.number_four));
+        words.add(new word("five","massokka",R.drawable.number_five,R.raw.number_five));
+        words.add(new word("six","temmokka",R.drawable.number_six,R.raw.number_six));
+        words.add(new word("seven","kawinta",R.drawable.number_seven,R.raw.number_seven));
+        words.add(new word("eight","wo'e",R.drawable.number_eight,R.raw.number_eight));
+        words.add(new word("nine","na'aacha",R.drawable.number_nine,R.raw.number_nine));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the

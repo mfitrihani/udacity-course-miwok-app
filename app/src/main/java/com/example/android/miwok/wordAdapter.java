@@ -1,10 +1,12 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,7 +55,7 @@ public class wordAdapter extends ArrayAdapter {
         }
 
         //get current object located from list
-        word currentWord = (word) getItem(position);
+        final word currentWord = (word) getItem(position);
 
         //find the TextViews in list_item.xml
         TextView miwokWord = listItemView.findViewById(R.id.top_text);
@@ -77,6 +79,18 @@ public class wordAdapter extends ArrayAdapter {
         //set background color of Linear Layout color
         LinearLayout mainLinear = listItemView.findViewById(R.id.card_linear_layout);
         mainLinear.setBackgroundColor(ContextCompat.getColor(getContext(), colorResource));
+
+        if(currentWord.hasAudio()){
+            //media player
+            Button play = listItemView.findViewById(R.id.play_button);
+            play.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    audioPlayer audioPlayer = new audioPlayer(currentWord.getAudioAssetId(),getContext());
+                    audioPlayer.play();
+                }
+            });
+        }
 
         //return listItemView now containing modified value
         return  listItemView;

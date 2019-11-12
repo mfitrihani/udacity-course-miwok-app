@@ -15,15 +15,10 @@ public class word {
         this.audioAssetId = audioAssetId;
     }
 
-    public word(String defaultTranslation, String miwokTranslation, int imageAssetId){
-        mImageAssetId = imageAssetId;
+    public word(String defaultTranslation, String miwokTranslation, int audioAssetId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-    }
-
-    public word(String defaultTranslation, String miwokTranslation){
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
+        this.audioAssetId = audioAssetId;
     }
 
     public String getMiwokTranslation(){
@@ -44,4 +39,11 @@ public class word {
     }
 
     public int getAudioAssetId(){ return audioAssetId; }
+
+    public Boolean hasAudio(){
+        if(audioAssetId==-1){
+            return false;
+        }
+        else return true;
+    }
 }
