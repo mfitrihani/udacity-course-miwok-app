@@ -4,8 +4,8 @@ import android.content.Context;
 import android.media.MediaPlayer;
 
 public class audioPlayer {
-    int audioId;
-    Context context;
+    private int audioId;
+    private Context context;
 
     public audioPlayer(int audioId, Context context){
         this.context = context;

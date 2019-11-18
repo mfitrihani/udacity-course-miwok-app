@@ -30,7 +30,7 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         //create list of word class
-        ArrayList<word> words = new ArrayList<word>();
+        ArrayList<word> words = new ArrayList<>();
 
         words.add(new word("Where are you going?","minto wuksus",R.raw.phrase_where_are_you_going));
         words.add(new word("What is your name?","tinnә oyaase'nә",R.raw.phrase_what_is_your_name));
@@ -53,7 +53,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_list.xmlyout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.

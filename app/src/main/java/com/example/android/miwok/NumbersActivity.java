@@ -29,7 +29,7 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         //create list of word class
-        ArrayList<word> words = new ArrayList<word>();
+        ArrayList<word> words = new ArrayList<>();
 
         words.add(new word("one","lutti",R.drawable.number_one,R.raw.number_one));
         words.add(new word("two","ottiko",R.drawable.number_two,R.raw.number_two));
@@ -51,7 +51,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_listl layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.

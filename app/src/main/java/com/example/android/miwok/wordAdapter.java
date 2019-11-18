@@ -1,7 +1,6 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
 
 import java.util.List;
 
@@ -62,6 +60,7 @@ public class wordAdapter extends ArrayAdapter {
         TextView englishWord = listItemView.findViewById(R.id.below_text);
 
         //set the text to current object value
+        assert currentWord != null;
         miwokWord.setText(currentWord.getMiwokTranslation());
         englishWord.setText(currentWord.getEnglishTranslation());
 

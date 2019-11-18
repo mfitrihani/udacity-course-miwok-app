@@ -4,9 +4,9 @@ package com.example.android.miwok;
 public class word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
+    private final static int no_image_value = -1;
     private int mImageAssetId = no_image_value;
     private int audioAssetId = no_image_value;
-    private final static int no_image_value = -1;
 
     public word(String mDefaultTranslation, String mMiwokTranslation, int mImageAssetId, int audioAssetId) {
         this.mDefaultTranslation = mDefaultTranslation;
@@ -31,19 +31,12 @@ public class word {
 
     public int getImageAssetId(){ return mImageAssetId; }
 
-    public Boolean hasImage(){
-        if (mImageAssetId==-1){
-            return false;
-        }
-        else return true;
+    public Boolean hasImage(){ return mImageAssetId != -1;
     }
 
     public int getAudioAssetId(){ return audioAssetId; }
 
     public Boolean hasAudio(){
-        if(audioAssetId==-1){
-            return false;
-        }
-        else return true;
+        return audioAssetId != -1;
     }
 }
