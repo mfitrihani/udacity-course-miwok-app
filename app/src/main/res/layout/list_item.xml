@@ -37,7 +37,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:background="@null"
+        android:background="?android:selectableItemBackground"
         android:id="@+id/play_button"
         android:layout_width="36dp"
         android:layout_height="36dp"
