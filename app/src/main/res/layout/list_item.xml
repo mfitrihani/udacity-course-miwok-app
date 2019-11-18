@@ -36,7 +36,8 @@
             android:textSize="18sp"/>
     </LinearLayout>
 
-    <Button
+    <ImageButton
+        android:background="@null"
         android:id="@+id/play_button"
         android:layout_width="36dp"
         android:layout_height="36dp"
@@ -45,6 +46,6 @@
         android:layout_marginBottom="26dp"
         android:layout_marginTop="26dp"
         android:layout_marginRight="26dp"
-        android:background="@android:drawable/ic_media_play"/>
+        android:src="@android:drawable/ic_media_play"/>
 
 </RelativeLayout>

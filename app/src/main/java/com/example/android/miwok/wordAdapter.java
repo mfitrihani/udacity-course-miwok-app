@@ -5,15 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-
 import java.util.List;
 
 public class wordAdapter extends ArrayAdapter {
@@ -81,7 +79,7 @@ public class wordAdapter extends ArrayAdapter {
 
         if(currentWord.hasAudio()){
             //media player
-            Button play = listItemView.findViewById(R.id.play_button);
+            ImageButton play = listItemView.findViewById(R.id.play_button);
             play.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
